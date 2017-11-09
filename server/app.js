@@ -5,12 +5,14 @@ const logger = require('morgan');
 const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
+const cors = require('cors')
 
 const index = require('./routes/index');
 const users = require('./routes/users');
 const articles = require('./routes/articles')
 
 const app = express();
+app.use(cors())
 
 mongoose.connect('mongodb://localhost/hactivpress-jainal-arifin', (err) => {
   if (err) {

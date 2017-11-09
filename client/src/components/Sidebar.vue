@@ -1,7 +1,9 @@
 <template lang="html">
-  <p class="list-group-item  list-group-item-action active">
-    <router-link :to="{ name: 'articleSumery', params: {id:sidebarArticle._id } }">
-      {{ sidebarArticle.title }}
+  <p href="#">
+    <router-link :to="{ name: 'articleSumery', params: {id: sidebarArticle._id } }">
+      <ul>
+        <li>{{ sidebarArticle.title }}</li>
+      </ul>
     </router-link>
   </p>
 </template>

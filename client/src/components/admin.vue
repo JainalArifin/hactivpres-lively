@@ -21,10 +21,14 @@
         <button type="submit" class="btn btn-primary"> add</button>
       </div>
     </form>
+    <div class="row">
+      <MainContent></MainContent>
+    </div>
   </div>
 </template>
 
 <script>
+import MainContent from '@/components/MainContent'
 import { mapActions } from 'vuex'
 export default {
   data () {
@@ -41,6 +45,9 @@ export default {
     ...mapActions([
       'addArticle'
     ])
+  },
+  components: {
+    MainContent
   }
 }
 </script>
